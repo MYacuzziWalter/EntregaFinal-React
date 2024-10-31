@@ -1,0 +1,5 @@
+[{"id":1,"category":"remeras","tittle":"Bear - T.Shirt","description":"El oso lo sabe: nada épico pasa en la zona de confort. Animate hacela bien.","price":15000,"stock": 10,"pictureUrl":"../../src/assets/RemeraOso.png"},
+{"id":2,"category":"remeras","tittle":"Police - T.Shirt","description":"Cada detalle está pensado para quienes se atreven a HACERLA BIEN y representar la esencia de lo urbano sin filtros.","price":15000,"stock": 10,"pictureUrl":"../../src/assets/remeraPolice.png"},
+{"id":3,"category":"buzos","tittle":"Buzo Claro Doopel","description":"Creado para los que saben de dónde vienen y hacia dónde van. Inspirado en el sentido de pertenencia y la identidad de nuestras calles.","price":23000,"stock": 10,"pictureUrl":"../../src/assets/BuzoClaro-removebg-preview.png"},
+{"id":4,"category":"buzos","tittle":"Buzo Oscuro Doopel","description":"Creado para los que saben de dónde vienen y hacia dónde van. Inspirado en el sentido de pertenencia y la identidad de nuestras calles.","price":23000,"stock": 10,"pictureUrl":"../../src/assets/BuzoOsc-removebg-preview (1).png"}
+]

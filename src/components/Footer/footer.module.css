@@ -1,0 +1,26 @@
+.footerContainer{
+    margin-top: 50px;
+    border-top: solid 1px;
+    height: 90px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+}
+
+.footerContainer a{
+    
+        font-size: 20px;
+        color: red;
+        text-decoration: none;
+        margin: 10px;
+        list-style-type: none;
+
+    text-decoration: none;
+}
+
+.footerContainer a:hover {
+    color: black;
+}
