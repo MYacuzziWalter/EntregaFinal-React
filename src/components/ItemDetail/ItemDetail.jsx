@@ -18,8 +18,9 @@ const ItemDetail = ({ product }) => {
         <div className={Styles.cardContainer}>
             <img src={product.pictureUrl} />
             <h1>{product.tittle}</h1>
-            <p>{product.category} </p>
             <span>{product.description}</span>
+            <p>{product.category} </p>
+            <p>Stock disponible: {product.stock}</p>
             {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={10} initial={1} />) : (
                     <Link to={'/cart'}>
                     <button>Go to Cart</button>
