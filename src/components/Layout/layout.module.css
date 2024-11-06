@@ -1,6 +1,7 @@
 .mainContainer {
-    display: flex;
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    justify-items: center;
 }

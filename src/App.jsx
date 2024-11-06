@@ -6,6 +6,7 @@ import NotFound from "./components/NotFound/NotFound"
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import CartProvider from './context/CartProvider';
+import Carusel from './components/Carusel/Carusel';
 
 
 

@@ -1,7 +1,7 @@
 
 import React, { useContext } from 'react'
 import cart from '../../assets/shopping-cart.png'
-import './Cart.css'
+import Syles from './Cart.module.css'
 import { Cart } from '../../context/CartProvider'
 
 
@@ -15,7 +15,7 @@ const CartWidget = () => {
 
     return (
     <div>
-        <img src={cart} alt='cart' className='cartwidget' />
+        <img src={cart} alt='cart' className={Syles.cartwidget} />
         <span>{quantity}</span>
     </div>
     )

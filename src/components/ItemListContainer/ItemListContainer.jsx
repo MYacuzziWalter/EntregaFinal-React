@@ -3,15 +3,24 @@ import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 import { db } from '../../firebase/config';
 import { collection, query, where, getDocs } from "firebase/firestore";
+import {ProgressBar} from "react-loader-spinner"
+import styles from './itemListContainer.module.css'
+import Carusel from '../Carusel/Carusel';
+
+
+
+
+
 
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
 
 
     useEffect(() => {
+        setLoading(true)
         ; (async () => {
 
             try {
@@ -39,15 +48,28 @@ const ItemListContainer = () => {
             } catch (error) {
                 console.log(error);
 
+            } finally {
+                setLoading(false)
             }
         })()
     }, [categoryId])
-    return loading ? (
-        <div>
-            <h2>Loading ... </h2>
+
+
+    return loading ? ( 
+        <div className={styles.loader}>
+            <ProgressBar 
+                height="80" 
+                width="80" 
+                ariaLabel="progress-bar-loading" 
+                wrapperStyle={{}}
+                wrapperClass="progress-bar-wrapper"
+                borderColor="#F4442E"
+                barColor="#51E5FF"
+            />
         </div>
     ) : (
-        <div>
+        <div className={styles.render}>
+            <Carusel/>
             <ItemList products={products} />
         </div>
     );

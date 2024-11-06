@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { createContext } from "react";
-import Item from '../components/Item/Item';
 
 
 //1 crear el contexto
@@ -42,6 +41,7 @@ const CartProvider = ({children}) => {
     const removeItem = (product) => {
         const cartUpdated = cart.filter(prod => prod.id !== product.id)
         setCart(cartUpdated)
+        unpdateQuantity(cartUpdated)
     }
 
     const clearCart = () => {

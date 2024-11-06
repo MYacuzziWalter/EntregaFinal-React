@@ -12,5 +12,29 @@
 }
 
 .container p{
-    text-align: center;
+        text-align: center;
 }
+
+.container h1 {
+        color: black;
+}
+.buttonDelete {
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        padding: 20px 0;
+        font-weight: 600;
+        line-height: 1;
+        cursor: pointer;
+        border: 1px solid #333;
+        background: #333;
+        text-decoration: none;
+        width: 100px;
+        margin-left: 50px;
+} 
+
+.buttonDelete:hover {
+        background-color: rgb(231, 112, 112);
+}
+

@@ -1,15 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Styles from './cartItem.module.css'
+import { Cart } from '../../context/CartProvider'
 
-const CartItem = ({item}) => {
+const CartItem = ({ item }) => {
+
+    const { removeItem } = useContext(Cart);
+
+    const handleRemoveItem = () => {
+        removeItem(item);
+    };
+
+
     return (
-    <div className={Styles.container}>
-        <img src={item.pictureUrl} />
-        <h1>{item.tittle}</h1>
-        <span>{item.description}</span>
-        <p>{item.quantity}</p>
-        <button>Delete</button>
-    </div>
+        
+
+
+            <div className={Styles.container}>
+                <img src={item.pictureUrl} />
+                <h1>{item.tittle}</h1>
+                <p>${item.price} c/u</p>
+                <p>cantidad: {item.quantity}</p>
+                <button className={Styles.buttonDelete} onClick={handleRemoveItem}>Delete</button>
+            </div>
+        
+
     )
 }
 

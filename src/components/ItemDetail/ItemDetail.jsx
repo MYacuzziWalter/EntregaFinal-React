@@ -15,18 +15,25 @@ const ItemDetail = ({ product }) => {
     }
 
     return (
-        <div className={Styles.cardContainer}>
-            <img src={product.pictureUrl} />
-            <h1>{product.tittle}</h1>
-            <span>{product.description}</span>
-            <p>{product.category} </p>
-            <p>Stock disponible: {product.stock}</p>
-            {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={10} initial={1} />) : (
+        <div className={Styles.centerContainer}>
+
+            <div className={Styles.cardContainer}>
+                <img src={product.pictureUrl} />
+                
+                <div className={Styles.detailRow}>
+                <h1>{product.tittle}</h1>
+                <p>$ {product.price} </p>
+                <span>{product.description}</span>
+                <p>{product.category} </p>
+                <p>Stock disponible: {product.stock}</p>
+                {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={10} initial={1} />) : (
                     <Link to={'/cart'}>
-                    <button>Go to Cart</button>
+                        <button>Go to Cart</button>
                     </Link>
                 )}
+                </div>
 
+            </div>
         </div>
     )
 }

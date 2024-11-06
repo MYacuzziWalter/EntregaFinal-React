@@ -1,7 +1,12 @@
-.container {
+.loader {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
+}
+
+
+
+.render h1 {
+    color: black;
+    text-align: center;
 }

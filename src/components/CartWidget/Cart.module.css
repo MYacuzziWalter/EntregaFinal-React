@@ -7,4 +7,8 @@
 span {
     color: #bb0707;
     margin-right: 10px;
+} 
+
+a {
+    text-decoration: none;
 }
