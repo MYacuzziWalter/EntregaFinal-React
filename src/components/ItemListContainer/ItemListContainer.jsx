@@ -69,7 +69,6 @@ const ItemListContainer = () => {
         </div>
     ) : (
         <div className={styles.render}>
-            <Carusel/>
             <ItemList products={products} />
         </div>
     );

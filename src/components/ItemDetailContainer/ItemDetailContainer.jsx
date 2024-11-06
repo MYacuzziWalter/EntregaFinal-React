@@ -4,14 +4,17 @@ import { useParams } from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../../firebase/config'
+import { ProgressBar } from 'react-loader-spinner';
 
 const ItemDetailContainer = () => {
 
     const [product, setProducts] = useState(null)
+    const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
     useEffect(() => {
         (async () => {
+            setLoading(true)
             try {
                 const docRef = doc(db, "Products", id);
                 const docSnap = await getDoc(docRef);
@@ -27,22 +30,31 @@ const ItemDetailContainer = () => {
             } catch (error) {
                 console.log(error);
                 
+            } finally {
+                setLoading(false)
             }
 
         })()
 
 
-
-
-        // const product = mockProducts.find(productToFind => productToFind.id === Number(id))
-
-        // setProducts(product)
-
-
     }, [id])
 
 
-    return (product && <ItemDetail product={product} />
+    return (
+        <div>
+            {loading ? (
+                <ProgressBar 
+                height="80" 
+                width="80" 
+                ariaLabel="progress-bar-loading" 
+                wrapperStyle={{}}
+                wrapperClass="progress-bar-wrapper"
+                borderColor="#F4442E"
+                barColor="#51E5FF"
+            />
+            ) : (product && <ItemDetail product={product} />)}
+        
+        </div>
 
     )
 }
