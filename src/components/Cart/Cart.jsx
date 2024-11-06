@@ -11,7 +11,7 @@ const Cart = () => {
     const [inputName, setInputName] = useState("")
     const [inputAddress, setInputAddress] = useState("")
     const [inputEmail, setInputEmail] = useState("")
-    const { cart , clearCart  } = useContext(CartContext)
+    const { cart , clearCart, totalPrice  } = useContext(CartContext)
 
     useEffect(() => {
 
@@ -57,6 +57,7 @@ const Cart = () => {
                 {cart.map((cartItem) => {
                     return <CartItem item={cartItem} key={cartItem.id} />
                 })}
+                <h2>Precio Total: ${totalPrice.toFixed(2)} </h2>
                 <button className={Style.buttonConfirm } onClick={() => setModalVisible(true)}>Confirmar compra</button>
                 {modalVisible && (
                     <div className={Style.modalContainer}>

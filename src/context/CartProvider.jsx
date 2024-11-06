@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { createContext } from "react";
 
 
@@ -46,6 +46,7 @@ const CartProvider = ({children}) => {
 
     const clearCart = () => {
         setCart([])
+        setQuantity(0)
     }
 
     const isInCart = (productId) => {
@@ -57,8 +58,12 @@ const CartProvider = ({children}) => {
         setQuantity(totalQuantity)
     }
 
+    const totalPrice = useMemo(() => {
+        return cart.reduce((acc, Item) => acc + Item.price * Item.quantity, 0)
+    }, [cart])
+
     return (
-        <Cart.Provider value={{addCart, cart, quantity, removeItem, clearCart}}>{children}</Cart.Provider>
+        <Cart.Provider value={{addCart, cart, quantity, totalPrice, removeItem, clearCart}}>{children}</Cart.Provider>
     )
 }
 
