@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from "./navBar.module.css"
-import CartWidget from '../cartwidget/CartWidget'
+import CartWidget from '../Cartwidget/CartWidget'
 import Icon from '../logo/Icon'
 import Icon1 from '../../assets/logoDoopel.png'
 import { Link } from 'react-router-dom'
