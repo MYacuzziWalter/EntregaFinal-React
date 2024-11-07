@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import ItemList from '../temList/ItemList';
+import ItemList from '../ItemList/ItemList';
 import { db } from '../../firebase/config';
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { ProgressBar } from "react-loader-spinner"
 import styles from './itemListContainer.module.css'
-import Carusel from '../carusel/Carusel';
+import Carusel from '../Carusel/Carusel';
 
 
 
