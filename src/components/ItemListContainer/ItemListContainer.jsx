@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import ItemList from '../itemList/ItemList';
+import ItemList from '../temList/ItemList';
 import { db } from '../../firebase/config';
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { ProgressBar } from "react-loader-spinner"
