@@ -4,9 +4,13 @@
     align-items: center;
 }
 
-
+.render {
+    background-color: rgba(10, 10, 10, 0.068);
+}
 
 .render h1 {
     color: black;
     text-align: center;
 }
+
+

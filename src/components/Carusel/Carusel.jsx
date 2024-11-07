@@ -1,33 +1,39 @@
 import Carousel from 'react-bootstrap/Carousel';
-import img1 from '../../assets/RemeraOso.png'
+import img1 from '../../assets/dropOso.png'
+import img2 from '../../assets/bannerDoopel.png'
+import img3 from '../../assets/bannerPolice.png'
+import Styles from './carusel.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 function Carusel() {
+
+
+    
+
     return (
-        <Carousel>
-            <Carousel.Item>
-                {/* <ExampleCarouselImage text="First slide" /> */}
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img src={img1}  />
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                {/* <ExampleCarouselImage text="Third slide" /> */}
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>
+        <div className={Styles.caruselMargin}>
+
+            <Carousel fade>
+                <Carousel.Item>
+                    <img className={`d-block w-100 ${Styles.sliderImage}`}src={img2} />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className={`d-block w-100 ${Styles.sliderImage}`} src={img1} />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className={`d-block w-100 ${Styles.sliderImage}`} src={img3} />
+                    <Carousel.Caption>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+        </div>
     );
 }
 

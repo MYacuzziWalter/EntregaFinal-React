@@ -23,7 +23,7 @@ const endPurchase = async (cart, inputName, inputEmail, inputAddress) => {
                 if (!product.exists()) {
                     throw "Lo sentimos, el producto no existe!"
                 }
-                console.log({ data: { ...product.data() } })
+
 
                 const productInCart = cart.find(
                     (cartElement) => cartElement.id === product.id
@@ -50,7 +50,7 @@ const endPurchase = async (cart, inputName, inputEmail, inputAddress) => {
                 const stockUpdated = stocksUpdated.find(
                     (stock) => stock.productId === id
                 )
-                console.log({ stockUpdated })
+                
                 transaction.update(ref, {
                     stock: stockUpdated.stock,
                 })

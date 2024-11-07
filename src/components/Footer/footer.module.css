@@ -1,5 +1,4 @@
 .footerContainer{
-    margin-top: 50px;
     border-top: solid 1px;
     height: 90px;
     list-style: none;
@@ -17,10 +16,15 @@
         text-decoration: none;
         margin: 10px;
         list-style-type: none;
-
-    text-decoration: none;
+        text-decoration: none;
 }
 
 .footerContainer a:hover {
     color: black;
+}
+
+
+.iconImage {
+    width: 30px;
+    height: 30px;
 }

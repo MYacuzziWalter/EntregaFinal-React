@@ -57,8 +57,8 @@ const Cart = () => {
                 {cart.map((cartItem) => {
                     return <CartItem item={cartItem} key={cartItem.id} />
                 })}
-                <h2>Precio Total: ${totalPrice.toFixed(2)} </h2>
                 <button className={Style.buttonConfirm } onClick={() => setModalVisible(true)}>Confirmar compra</button>
+                <p className={Style.price}>Precio Total: ${totalPrice.toFixed(2)} </p>
                 {modalVisible && (
                     <div className={Style.modalContainer}>
                         <div className={Style.modal}></div>

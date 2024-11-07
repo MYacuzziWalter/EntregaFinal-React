@@ -1,21 +1,22 @@
 .cardContainer {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 650px;
+    width: 350px;
+    height: 450px;
     border: solid 1px rgb(199, 199, 199);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 2px -5px 54px -16px rgba(0,0,0,0.74);
--webkit-box-shadow: 2px -5px 54px -16px rgba(0,0,0,0.74);
--moz-box-shadow: 2px -5px 54px -16px rgba(0,0,0,0.74);
+    transition: 0.4s;
+    background-color: white;
 }
 
 .cardContainer img {
-    width: 380px;
-    height: 400px;
+    object-fit: cover;
+    width: auto;
+    height: 150px;
 }
 
 .cardContainer h2 {

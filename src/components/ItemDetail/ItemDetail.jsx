@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const ItemDetail = ({ product }) => {
-    const { addCart } = useContext(Cart)
+    const { addCart, quantity } = useContext(Cart)
     const [itemCountVisibility, setItemCountVisibility] = useState(true)
 
     const handleCart = (quantity) => {
@@ -24,11 +24,11 @@ const ItemDetail = ({ product }) => {
                 <h1>{product.tittle}</h1>
                 <p>$ {product.price} </p>
                 <span>{product.description}</span>
-                <p>{product.category} </p>
+
                 <p>Stock disponible: {product.stock}</p>
-                {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={10} initial={1} />) : (
+                {itemCountVisibility ? (<ItemCount addCart={handleCart} stock={product.stock - quantity} initial={1} />) : (
                     <Link to={'/cart'}>
-                        <button>Go to Cart</button>
+                        <button className={Styles.buttonCart}>Ir al carro</button>
                     </Link>
                 )}
                 </div>

@@ -30,8 +30,20 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
 .detailRow h1 {
     color: black;
+}
+
+.buttonCart {
+    color: white;
+    border: 1px solid #333;
+    background: #333;
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid 1px;
 }

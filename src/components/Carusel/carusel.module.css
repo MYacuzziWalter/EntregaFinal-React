@@ -1,0 +1,12 @@
+.sliderImage{ 
+    object-fit: cover;
+    width: 100%;
+    height: 800px;
+    cursor: pointer;
+    
+}
+
+.caruselMargin{
+    margin-bottom: 15px;
+}
+
