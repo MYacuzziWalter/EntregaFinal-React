@@ -1,7 +1,7 @@
 
 import React, { useContext } from 'react'
 import cart from '../../assets/shopping-cart.png'
-import Syles from './Cart.module.css'
+import Syles from './cart.module.css'
 import { Cart } from '../../context/CartProvider'
 
 

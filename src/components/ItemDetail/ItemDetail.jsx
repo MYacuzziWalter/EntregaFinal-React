@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { ItemCount } from '../ItemCount/ItemCount';
+import { ItemCount } from '../itemCount/ItemCount';
 import Styles from "./itemDetail.module.css"
 import { Cart } from '../../context/CartProvider';
 import { Link } from 'react-router-dom';

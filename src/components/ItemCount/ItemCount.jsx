@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './itemCount.css'
+import styles from './itemCount.module.css'
 
 export const ItemCount = ({ stock, initial, addCart }) => {
     const [quantity, setQuantity] = useState(initial)
@@ -18,14 +18,14 @@ export const ItemCount = ({ stock, initial, addCart }) => {
 
     return (
         <>
-            <div className='container'>
-                <div className='buttonContainer'>
+            <div className={styles.container}>
+                <div className={styles.buttonContainer}>
                     <button onClick={decrement}>-</button>
-                    <h5 className='number'>{quantity}</h5>
+                    <h5 className={styles.number}>{quantity}</h5>
                     <button onClick={increment}>+</button>
                 </div>
-                <div className='containerConfirm'>
-                    <button className='buttonConfirm' onClick={() => addCart(quantity)} disabled={!stock}>Agregar</button>
+                <div className={styles.containerConfirm}>
+                    <button className={styles.buttonConfirm} onClick={() => addCart(quantity)} disabled={!stock}>Agregar</button>
                 </div>
             </div>
         </>

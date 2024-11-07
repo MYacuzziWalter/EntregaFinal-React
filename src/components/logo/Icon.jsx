@@ -1,11 +1,11 @@
 import React from 'react'
-import './Icon.css'
+import styles from './Icon.module.css'
 
 
 
 const Icon = ({ src }) => {
     return (
-        <img src={src} alt="icon" className='logo' />
+        <img src={src} alt="icon" className={styles.logo} />
     )
 }
 
