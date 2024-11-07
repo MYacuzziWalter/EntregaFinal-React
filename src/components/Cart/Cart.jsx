@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Cart as CartContext } from '../../context/CartProvider'
-import CartItem from '../CartItem/CartItem';
+import CartItem from '../cartItem/CartItem';
 import Style from './cart.module.css'
 import { Link } from 'react-router-dom';
 import endPurchase from '../../services/endPurchase';
