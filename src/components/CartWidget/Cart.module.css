@@ -2,13 +2,10 @@
     width: 30px;
     margin: 5px;
     
-    
 }
-span {
+.cardQuantity  {
     color: #bb0707;
     margin-right: 10px;
+    text-decoration: none;
 } 
 
-a {
-    text-decoration: none;
-}

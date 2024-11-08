@@ -29,9 +29,7 @@ const Cart = () => {
     }, [])
 
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    // }
+    
 
     const handleFinalizePurchase = async () => {
         // Llama a endPurchase y espera a que se complete
