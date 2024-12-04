@@ -81,7 +81,7 @@ const ItemListContainer = () => {
     return (
 
         <div className={styles.render}>
-            <Carusel />
+            {!categoryId && <Carusel />}
             {error ? (
                 <div>{error}</div>
             ): ( 
